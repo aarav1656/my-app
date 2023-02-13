@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Customers from "../../Pages/Previous";
-import Dashboard from "../../Pages/Dashbaord";
+import Dashboard from "../../Pages/Dashboard";
 import Upcoming from "../../Pages/Upcoming";
 import Previous from "../../Pages/Previous";
 import Live from "../../Pages/Live";

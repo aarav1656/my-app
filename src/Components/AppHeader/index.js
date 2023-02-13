@@ -1,20 +1,19 @@
 import { BellFilled, MailOutlined } from "@ant-design/icons";
 import { Button, Badge, Drawer, Image, List, Space, Typography } from "antd";
 import { useEffect, useState } from "react";
-import { getComments, getOrders } from "../../API";
 
 function AppHeader() {
   const [comments, setComments] = useState([]);
   const [orders, setOrders] = useState([]);
   const [commentsOpen, setCommentsOpen] = useState(false);
-  useEffect(() => {
-    getComments().then((res) => {
-      setComments(res.comments);
-    });
-    getOrders().then((res) => {
-      setOrders(res.products);
-    });
-  }, []);
+//   useEffect(() => {
+//     getComments().then((res) => {
+//       setComments(res.comments);
+//     });
+//     getOrders().then((res) => {
+//       setOrders(res.products);
+//     });
+//   }, []);
 
   return (
     <div className="AppHeader">
