@@ -4,13 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "@arcana/auth";
+import { ProvideAuth } from "@arcana/auth-react";
+
+const provider = new AuthProvider(process.env.REACT_APP_ARCANA_APP_ID);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ProvideAuth provider={provider}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ProvideAuth>
   </React.StrictMode>
 );
 

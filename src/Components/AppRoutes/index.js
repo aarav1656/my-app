@@ -4,6 +4,8 @@ import Dashboard from "../../Pages/Dashboard";
 import Upcoming from "../../Pages/Upcoming";
 import Previous from "../../Pages/Previous";
 import Live from "../../Pages/Live";
+import Admin from "../../Pages/Admin";
+
 
 function AppRoutes() {
   return (
@@ -12,6 +14,7 @@ function AppRoutes() {
       <Route path="/upcoming" element={<Upcoming />}></Route>
       <Route path="/live" element={<Live />}></Route>
       <Route path="/previous" element={<Previous />}></Route>
+      <Route path="/admin" element={<Admin />}></Route>
     </Routes>
   );
 }
