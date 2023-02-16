@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "@arcana/auth";
 import { ProvideAuth } from "@arcana/auth-react";
-import Arcana from "./Components/arcana";
+
 
 const provider = new AuthProvider("c44b07dc468179660df5a4b62535ea01b0d5b0fa");
 

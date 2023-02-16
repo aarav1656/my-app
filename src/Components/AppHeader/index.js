@@ -1,12 +1,22 @@
 import { BellFilled, MailOutlined } from "@ant-design/icons";
 import { Button, Badge, Drawer, Image, List, Space, Typography } from "antd";
 import { useEffect, useState } from "react";
-import Arcana from "../arcana";
+import { Auth, useAuth } from "@arcana/auth-react";
 
 function AppHeader() {
+  const auth = useAuth();
+  const onLogin = () => {
+    // Route to authenticated page
+  }
   const [comments, setComments] = useState([]);
   const [orders, setOrders] = useState([]);
   const [commentsOpen, setCommentsOpen] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [isIN, setIsIn] = useState("Sign Up");
+
+  const handleClick1 = () => {
+    setShowLogin(true);
+  }
 
   return (
     <div className="AppHeader">
@@ -17,7 +27,20 @@ function AppHeader() {
       <Typography.Title>CasterX</Typography.Title>
       <Space>
         <Badge count={comments.length} dot>
-        <Button type="primary">Sign up</Button>
+        <Button onClick={handleClick1} type="primary">{isIN}</Button>
+        {showLogin ? (
+        <div>
+        {auth.loading ? (
+          "Loading"
+        ) : auth.isLoggedIn ? (
+          <p1>Logged in</p1>
+        ) : (
+          <div>
+            <Auth externalWallet={true} theme={"light"} onLogin={onLogin}/>
+          </div>
+        )}
+      </div>
+      ) : null}
         </Badge>
         <Badge count={orders.length}>
           <BellFilled
