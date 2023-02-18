@@ -36,3 +36,77 @@ border-top: 1px solid rgba(0, 0, 0, 0.15);
 .PageContent{
   padding-left: 12px;
 }
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  margin-left: 400px;
+}
+
+.profile-img-container {
+  margin-bottom: 50px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-stats-container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #999;
+}
+
+.matches-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.match-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.team-logo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.match-info-container {
+  text-align: center;
+  margin-top: 20px;
+}
+

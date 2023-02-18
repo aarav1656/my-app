@@ -5,6 +5,7 @@ import Upcoming from "../../Pages/Upcoming";
 import Previous from "../../Pages/Previous";
 import Live from "../../Pages/Live";
 import Admin from "../../Pages/Admin";
+import ProfilePage from "../../Pages/Profile";
 
 
 function AppRoutes() {
@@ -15,6 +16,7 @@ function AppRoutes() {
       <Route path="/live" element={<Live />}></Route>
       <Route path="/previous" element={<Previous />}></Route>
       <Route path="/admin" element={<Admin />}></Route>
+      <Route path="/profile" element={<ProfilePage />}></Route>
     </Routes>
   );
 }
