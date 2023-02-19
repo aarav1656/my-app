@@ -29,6 +29,12 @@ export const bet = async (team, gameID, amount)=>{
       console.log(`Bet created`);
 }
 
+const sleep = async (milliseconds) => {
+    await new Promise(resolve => {
+        return setTimeout(resolve, milliseconds)
+    });
+};
+
 export const profile_SBT = async () => {
     const Web3 = require('web3');
 
@@ -55,8 +61,8 @@ export const profile_SBT = async () => {
     .once("transactionHash", (txhash) => {
         console.log(`Minting SBT ...`);
       });
-    console.log(`SBT Minted`)
-    ;
+    console.log(`SBT Minted`);
+    await sleep(5000);
 
 }
 
