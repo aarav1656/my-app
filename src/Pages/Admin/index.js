@@ -6,19 +6,35 @@ const Admin = () => {
   const [form] = Form.useForm();
   const [formLayout, setFormLayout] = useState('horizontal');
   const [showForm, setShowForm] = useState(false);
+  const [showForm1, setShowForm1] = useState(false);
+  const [showForm2, setShowForm2] = useState(false);
   const [HomeTeam, setHomeTeam] = useState();
   const [AwayTeam, setAwayTeam] = useState();
   const [StartTime, setStartTime] = useState();
-  cosnt [GameId, setgameId] = useState(false);
+  const [GameID, setGameID] = useState();
+  const [winTeam, setwinTeam] = useState();
 
   const handleClick = () => {
     setShowForm(true);
+  }
+  const handleClick1 = () => {
+    setShowForm1(true);
+  }
+  const handleClick2 = () => {
+    setShowForm2(true);
   }
   const handleSubmit = (event) => {
     event.preventDefault();
     submit(HomeTeam, AwayTeam, StartTime);
   };
-
+  const handleSubmit1 = (event) => {
+    event.preventDefault();
+    startBet(GameID);
+  };
+  const handleSubmit2 = (event) => {
+    event.preventDefault();
+    endBet(GameID, winTeam);
+  };
   //on click for submitting form, get values from form and put here
   const submit = async (HomeTeam,AwayTeam,StartTime) => {
     await createGame("HomeTeam","AwayTeam",'0000');
@@ -72,17 +88,43 @@ const Admin = () => {
       </Form>
       </div>
       ) : null}
-    <Button block>Start bet</Button>
-    {gameID ? (
-      <Form.Item label="gameID">
-      <Input placeholder="gameID" 
-      onChange={(event) => setgameId(event.target.value)}
-      />
-    </Form.Item>      
-    ) : null }
-    <Button type="dashed" block>
+    <Button onClick={handleClick1} block>Start bet</Button>
+    {showForm1 ? (
+      <div>
+        <Form>
+        <Form.Item label="GameID">
+          <Input placeholder="ID" 
+          onChange={(event) => setHomeTeam(event.target.value)}
+          />
+        </Form.Item>
+        <Form.Item>
+          <Button onClick={handleSubmit1} type="primary">Submit</Button>
+        </Form.Item>
+        </Form> 
+      </div>
+      ) : null}
+    <Button onClick={handleClick2} type="dashed" block>
       End Bet
     </Button>
+    {showForm2 ? (
+      <div>
+        <Form>
+        <Form.Item label="GameID">
+          <Input placeholder="ID" 
+          onChange={(event) => setGameID(event.target.value)}
+          />
+        </Form.Item>
+        <Form.Item label="winTeam">
+          <Input placeholder="win" 
+          onChange={(event) => setwinTeam(event.target.value)}
+          />
+        </Form.Item>
+        <Form.Item>
+          <Button onClick={handleSubmit2} type="primary">Submit</Button>
+        </Form.Item>
+        </Form> 
+      </div>
+      ) : null}
   </Space>
   );
 
