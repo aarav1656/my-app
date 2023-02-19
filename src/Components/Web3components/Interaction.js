@@ -1,3 +1,4 @@
+require('dotenv').config
 import {betting_abi, betting_CA} from '../../artifacts/betting';
 import { SBT_ABI,SBT_CA } from '../../artifacts/PSBT';
 
@@ -38,7 +39,7 @@ export const profile_SBT = async () => {
     var web3 = new Web3(web3Provider);
 
     //getting owner account
-    const signer = web3.eth.accounts.privateKeyToAccount('0xd8f0bd0d2d9f638d123e8991df564c208866da35657026d8bb75a7961d269865');
+    const signer = web3.eth.accounts.privateKeyToAccount(process.env.PRIVATE_KEY);
     web3.eth.accounts.wallet.add(signer);
 
     const contract = new web3.eth.Contract(SBT_ABI,SBT_CA);
