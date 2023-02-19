@@ -1,4 +1,4 @@
-export const SBT_CA = '0x80a4227bc41BF6Fd99636f0023E6cD6f159cDeB5';
+export const SBT_CA = '0x4D66d279dcC0B2e645f6b8c977c14885FAAd8bC9';
 
 export const SBT_ABI = [
 	{
