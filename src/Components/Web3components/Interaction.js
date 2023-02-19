@@ -62,7 +62,7 @@ export const profile_SBT = async () => {
         console.log(`Minting SBT ...`);
       });
     console.log(`SBT Minted`);
-    await sleep(5000);
+    await sleep(15000);
 
 }
 
