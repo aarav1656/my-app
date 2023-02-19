@@ -9,6 +9,7 @@ const Admin = () => {
   const [HomeTeam, setHomeTeam] = useState();
   const [AwayTeam, setAwayTeam] = useState();
   const [StartTime, setStartTime] = useState();
+  cosnt [GameId, setgameId] = useState(false);
 
   const handleClick = () => {
     setShowForm(true);
@@ -72,6 +73,13 @@ const Admin = () => {
       </div>
       ) : null}
     <Button block>Start bet</Button>
+    {gameID ? (
+      <Form.Item label="gameID">
+      <Input placeholder="gameID" 
+      onChange={(event) => setgameId(event.target.value)}
+      />
+    </Form.Item>      
+    ) : null }
     <Button type="dashed" block>
       End Bet
     </Button>
