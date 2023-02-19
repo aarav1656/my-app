@@ -1,3 +1,4 @@
+require('dotenv').config()
 import { betting_abi, betting_CA } from '../../artifacts/betting'
 import { split_abi, split_byte } from '../../artifacts/split'
 
@@ -11,7 +12,7 @@ var web3 = new Web3(web3Provider)
 
 //getting owner account
 const signer = web3.eth.accounts.privateKeyToAccount(
-  '0xd8f0bd0d2d9f638d123e8991df564c208866da35657026d8bb75a7961d269865'
+  process.env.PRIVATE_KEY
 )
 web3.eth.accounts.wallet.add(signer)
 
