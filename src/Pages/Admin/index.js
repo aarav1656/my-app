@@ -33,7 +33,7 @@ const Admin = () => {
   };
   const handleSubmit2 = (event) => {
     event.preventDefault();
-    endBet(GameID, winTeam);
+    endbet(GameID, winTeam);
   };
   //on click for submitting form, get values from form and put here
   const submit = async (HomeTeam,AwayTeam,StartTime) => {
@@ -46,9 +46,8 @@ const Admin = () => {
   }
 
   //end bet , take gameid,winTeam as input
-  const endBet = async (GameID,winTeam) => {
-    await endBet(0);
-
+  const endbet = async (GameID,winTeam) => {
+    await endBet(GameID,winTeam);
   }
 
   const onFormLayoutChange = ({ layout }) => {

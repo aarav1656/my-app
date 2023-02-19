@@ -1,72 +1,5 @@
-export const betting_CA = '0x74E72a90B7AE62a8bE113374cAe7a2995A277ee7'
+export const betting_CA = '0x71C9935b479E442f72563E16998b187C043F6Cfd'
 export const betting_abi = [
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "HomeTeam",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "AwayTeam",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_startTime",
-				"type": "uint256"
-			}
-		],
-		"name": "createGame",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "gameID",
-				"type": "uint256"
-			}
-		],
-		"name": "endBet",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "Home_Away",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "gameID",
-				"type": "uint256"
-			}
-		],
-		"name": "placeBet",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "gameID",
-				"type": "uint256"
-			}
-		],
-		"name": "startBetting",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
 	{
 		"inputs": [
 			{
@@ -87,6 +20,25 @@ export const betting_abi = [
 			}
 		],
 		"name": "Away_Amounts",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Home_Amounts",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -133,6 +85,42 @@ export const betting_abi = [
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "HomeTeam",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "AwayTeam",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_startTime",
+				"type": "uint256"
+			}
+		],
+		"name": "createGame",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "gameID",
+				"type": "uint256"
+			}
+		],
+		"name": "endBet",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -209,19 +197,31 @@ export const betting_abi = [
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "Home_Away",
 				"type": "uint256"
-			}
-		],
-		"name": "Home_Amounts",
-		"outputs": [
+			},
 			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "gameID",
 				"type": "uint256"
 			}
 		],
-		"stateMutability": "view",
+		"name": "placeBet",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "gameID",
+				"type": "uint256"
+			}
+		],
+		"name": "startBetting",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]
