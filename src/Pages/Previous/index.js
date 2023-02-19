@@ -7,8 +7,8 @@ const matches = [
     venue: "Wankhede Stadium, Mumbai",
     date: "2022-04-07",
     result: "Mumbai Indians won by 20 runs",
-    team1Logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyysrm6wY5uz24t_1BsC6AbrcYlfWowbR3hKu_PPsIIQ&s",
-    team2Logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsZ1uHa3_4lCNJfd4z1-Sn78qBM4-ibD9v9I4HwWI&s"
+    team1Logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtLe8NoSWCj5YLZ1IAyudqt7FILbyYrd7j4gZ3BVQ&s",
+    team2Logo: ""
   },
   {
     id: 2,

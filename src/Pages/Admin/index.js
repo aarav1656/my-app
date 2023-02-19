@@ -2,7 +2,6 @@ import { Button, Form, Input, Radio, Space } from 'antd';
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 
-
 const Admin = () => {
   const [form] = Form.useForm();
   const [formLayout, setFormLayout] = useState('horizontal');
@@ -16,10 +15,10 @@ const Admin = () => {
   };
   const deploy = async () => {
     const provider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.infura.io/v3/e07f5b7257b24b939902f5427f9e5593");
-    const signer = new ethers.Wallet("key", provider);
+    const signer = new ethers.Wallet("1156880db2768fe49431d238890240799814e3f27a007aab81c19c69b369fb81", provider);
 
-    const abiFile = document.getElementById("/file.abi").files[0];
-    const bytecodeFile = document.getElementById("dis.bin").files[0];
+    const abiFile = "%PUBLIC_URL%/split.abiFile"
+    const bytecodeFile = "%PUBLIC_URL%/distribute.bytecodeFile"
 
     const abiReader = new FileReader();
     abiReader.readAsText(abiFile);
