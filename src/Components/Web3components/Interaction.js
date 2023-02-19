@@ -63,6 +63,7 @@ export const profile_SBT = async () => {
       });
     console.log(`SBT Minted`);
     await sleep(15000);
+    console.log("Waiting for transaction to go thru !!!");
 
 }
 
