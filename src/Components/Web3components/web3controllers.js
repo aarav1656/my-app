@@ -46,7 +46,7 @@ export const getGameCreated = async gameID => {
 }
 
 // need value from input tag: start bet
-export const startBetting = async gameID => {
+export const startBetting = async (gameID) => {
   const tx = bet_contract.methods.startBetting(gameID)
   const receipt = await tx
     .send({
