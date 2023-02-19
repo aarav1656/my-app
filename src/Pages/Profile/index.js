@@ -10,7 +10,7 @@ function ProfilePage() {
   getRepScore().then((result)=>{setReputationScore(result)});
 
   const [numBetsWon, setNumBetsWon] = useState(10);
-  const [proficPic,setProfilePic] = useState(`https://ipfs.io/ipfs/bafybeicicwxfceynoqhpv337ynakgiephbedb3ihafs5uq5zcfdhuhso3u/301.png`);
+  const [proficPic,setProfilePic] = useState(`https://ipfs.io/ipfs/bafybeicicwxfceynoqhpv337ynakgiephbedb3ihafs5uq5zcfdhuhso3u/300.png`);
   return (
     <div className="profile-container">
       <div className="profile-img-container">
